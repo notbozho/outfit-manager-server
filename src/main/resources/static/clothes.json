@@ -1,0 +1,127 @@
+[
+  {
+    "type": "tank top",
+    "colors": ["black"],
+    "style": ["ribbed", "fitted"]
+  },
+  {
+    "type": "tank top",
+    "colors": ["white"],
+    "styles": ["ribbed", "fitted"]
+  },
+  {
+    "type": "tshirt",
+    "colors": ["black"],
+    "styles": ["plain", "regular fit"]
+  },
+  {
+    "type": "tshirt",
+    "colors": ["white"],
+    "styles": ["plain", "regular fit"]
+  },
+  {
+    "type": "tshirt",
+    "colors": ["beige"],
+    "styles": ["plain", "fitted"]
+  },
+  {
+    "type": "tshirt",
+    "colors": ["gray"],
+    "styles": ["plain", "regular fit"]
+  },
+  {
+    "type": "tshirt",
+    "colors": ["black", "pink"],
+    "styles": ["graphic", "oversized"]
+  },
+  {
+    "type": "tshirt",
+    "colors": ["black", "white"],
+    "styles": ["stripped", "regular fit", "long sleeve"]
+  },
+  {
+    "type": "tshirt",
+    "colors": ["beige", "black"],
+    "styles": ["graphic", "regular fit", "long sleeve"]
+  },
+  {
+    "type": "hoodie",
+    "colors": ["black"],
+    "styles": ["plain", "regular fit", "zip up"]
+  },
+  {
+    "type": "hoodie",
+    "colors": ["light blue"],
+    "styles": ["plain", "regular fit", "zip up"]
+  },
+  {
+    "type": "jeans",
+    "colors": ["light blue"],
+    "styles": ["regular fit", "straight leg"]
+  },
+  {
+    "type": "jeans",
+    "colors": ["black"],
+    "styles": ["regular fit", "straight leg", "ripped"]
+  },
+  {
+    "type": "jeans",
+    "colors": ["gray"],
+    "styles": ["carrot fit", "ripped"]
+  },
+  {
+    "type": "jeans",
+    "colors": ["white"],
+    "styles": ["regular fit", "straight leg"]
+  },
+  {
+    "type": "pants",
+    "colors": ["black"],
+    "styles": ["jogger", "regular fit"]
+  },
+  {
+    "type": "pants",
+    "colors": ["beige"],
+    "styles": ["jogger", "regular fit"]
+  },
+  {
+    "type": "pants",
+    "colors": ["light gray"],
+    "styles": ["jogger", "regular fit"]
+  },
+  {
+    "type": "pants",
+    "colors": ["black"],
+    "styles": ["cargo", "regular fit"]
+  },
+  {
+    "type": "shirt",
+    "colors": ["white"],
+    "styles": ["plain", "casual", "regular fit", "long sleeve"]
+  },
+  {
+    "type": "shirt",
+    "colors": ["pink"],
+    "styles": ["plain", "casual", "oversized fit", "short sleeve"]
+  },
+  {
+    "type": "shorts",
+    "colors": ["black"],
+    "styles": ["regular fit"]
+  },
+  {
+    "type": "shorts",
+    "colors": ["white"],
+    "styles": ["fitted"]
+  },
+  {
+    "type": "shorts",
+    "colors": ["gray"],
+    "styles": ["fitted"]
+  },
+  {
+    "type": "shorts",
+    "colors": ["black"],
+    "styles": ["cargo", "regular fit"]
+  }
+]
