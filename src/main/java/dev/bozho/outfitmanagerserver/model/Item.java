@@ -36,6 +36,9 @@ public class Item {
 
     private LocalDateTime dateLastWorn;
 
+    @Column(columnDefinition = "boolean default false")
+    private boolean favorite = false;
+
     @ManyToMany()
     private Set<Outfit> outfits = new HashSet<>();
 
@@ -43,6 +46,15 @@ public class Item {
         this.type = type;
         this.color = color;
         this.name = name;
+    }
+
+    public Item(Long id, ItemType type, Color color, String name, String image, boolean favorite) {
+        this.id = id;
+        this.type = type;
+        this.color = color;
+        this.name = name;
+        this.image = image;
+        this.favorite = favorite;
     }
 
 }

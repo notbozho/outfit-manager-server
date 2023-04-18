@@ -1,7 +1,7 @@
 package dev.bozho.outfitmanagerserver.service.impl;
 
 import dev.bozho.outfitmanagerserver.model.Item;
-import dev.bozho.outfitmanagerserver.payload.ItemDTO;
+import dev.bozho.outfitmanagerserver.payload.ItemDto;
 import dev.bozho.outfitmanagerserver.payload.ItemResponse;
 import dev.bozho.outfitmanagerserver.repository.ItemRepository;
 import dev.bozho.outfitmanagerserver.service.IItemService;
@@ -30,12 +30,11 @@ public class ItemService implements IItemService {
 
     @Override
     public Item getItemById(Long id) {
-        return null;
+        return itemRepository.findById(id).orElse(null);
     }
 
     @Override
-    public Item createItem(ItemDTO itemDTO, MultipartFile imageFile) {
-
+    public ItemResponse createItem(ItemDto itemDTO, MultipartFile imageFile) {
         Item item  = modelMapper.map(itemDTO, Item.class);
 
         try {
@@ -47,7 +46,12 @@ public class ItemService implements IItemService {
         } catch (IOException ex) {
             ex.printStackTrace();
         }
-        return item;
+        return modelMapper.map(item, ItemResponse.class);
+    }
+
+    @Override
+    public void deleteItem(Long id) {
+            itemRepository.deleteById(id);
     }
 
     private static String convertToBase64(byte[] data) {

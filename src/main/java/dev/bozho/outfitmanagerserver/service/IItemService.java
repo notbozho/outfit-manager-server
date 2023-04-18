@@ -1,7 +1,7 @@
 package dev.bozho.outfitmanagerserver.service;
 
 import dev.bozho.outfitmanagerserver.model.Item;
-import dev.bozho.outfitmanagerserver.payload.ItemDTO;
+import dev.bozho.outfitmanagerserver.payload.ItemDto;
 import dev.bozho.outfitmanagerserver.payload.ItemResponse;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -13,5 +13,7 @@ public interface IItemService {
 
     Item getItemById(Long id);
 
-    Item createItem(ItemDTO item, MultipartFile imageFile);
+    ItemResponse createItem(ItemDto item, MultipartFile imageFile);
+
+    void deleteItem(Long id);
 }

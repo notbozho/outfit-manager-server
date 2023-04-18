@@ -1,7 +1,6 @@
 package dev.bozho.outfitmanagerserver.controller;
 
-import dev.bozho.outfitmanagerserver.model.Item;
-import dev.bozho.outfitmanagerserver.payload.ItemDTO;
+import dev.bozho.outfitmanagerserver.payload.ItemDto;
 import dev.bozho.outfitmanagerserver.payload.ItemResponse;
 import dev.bozho.outfitmanagerserver.service.impl.ItemService;
 import lombok.RequiredArgsConstructor;
@@ -19,10 +18,8 @@ public class ItemController {
     private final ItemService itemService;
 
     @PostMapping(value = "/create")
-    public ResponseEntity<Item> createItem(@RequestPart("item") ItemDTO item, @RequestPart("image") MultipartFile imageFile) {
-        Item createdItem = itemService.createItem(item, imageFile);
-
-        System.out.println(createdItem.toString());
+    public ResponseEntity<ItemResponse> createItem(@RequestPart("item") ItemDto item, @RequestPart("image") MultipartFile imageFile) {
+        ItemResponse createdItem = itemService.createItem(item, imageFile);
 
         return ResponseEntity.ok(createdItem);
     }
@@ -34,4 +31,10 @@ public class ItemController {
         return ResponseEntity.ok(items);
     }
 
+    @DeleteMapping(value = "/delete/{id}")
+    public ResponseEntity<String> deleteItem(@PathVariable Long id) {
+        itemService.deleteItem(id);
+
+        return ResponseEntity.ok(String.format("Item with id %d deleted successfully", id));
+    }
 }
